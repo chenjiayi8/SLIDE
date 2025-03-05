@@ -310,6 +310,8 @@ inline void drive_cycle_artemis()
   std::cout << "V: " << c.V() << '\n';
   std::cout << "SOC: " << 100 * c.SOC() << '\n';
   std::cout << "Finished drive_cycle example in " << clk << ".\n";
+  // print the output folder
+  std::cout << "drive_cycle_artemis Output folder: results" << '\n';
 }
 
 } // namespace slide::examples
