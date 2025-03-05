@@ -1,0 +1,9 @@
+services:
+  slide:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: slide
+    hostname: slide
+    volumes:
+      - ../:/app
