@@ -102,6 +102,7 @@ inline auto GITT_test()
     }
   }
   out_GITT.close();
+  std::cout << "GITT_test Output folder: results" << '\n';
 }
 
 } // namespace slide::examples
