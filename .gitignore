@@ -20,3 +20,6 @@ build/*
 bin/*
 *.pyc
 *.asv
+myenv/*
+python/myenv/*
+results/*
