@@ -108,21 +108,21 @@ int main()
    * 					1	Yang et al's model for thermodynamic plating (Tafel kinetics)
    * 							ref: Yang, Leng, Zhang, Ge, Wang, Journal of Power Sources 360, 2017
    */
-  //!< For now, assume we want to include 'Pinson&Bazant'-SEI growth, 'Delacourt'-LAM, 'Kindermann'-LAM and 'Yang'-lithium plating
-  // slide::DEG_ID deg;
-  // deg.SEI_id.add_model(2); //!< Pinson & Bazant SEI growth
-  // deg.SEI_porosity = 0;    //!< don't decrease the porosity (set to 1 if you do want to decrease the porosity)
+  // !< For now, assume we want to include 'Pinson&Bazant'-SEI growth, 'Delacourt'-LAM, 'Kindermann'-LAM and 'Yang'-lithium plating
+  slide::DEG_ID deg;
+  deg.SEI_id.add_model(2); //!< Pinson & Bazant SEI growth
+  deg.SEI_porosity = 0;    //!< don't decrease the porosity (set to 1 if you do want to decrease the porosity)
 
-  // deg.CS_id.add_model(0); //!< no surface cracks
-  // deg.CS_diffusion = 0;   //!< don't decrease the diffusion coefficient (set to 1 if you do want to decrease the diffusion)
+  deg.CS_id.add_model(0); //!< no surface cracks
+  deg.CS_diffusion = 0;   //!< don't decrease the diffusion coefficient (set to 1 if you do want to decrease the diffusion)
 
-  // //!< there are 2 LAM models (Delacourt and Kindermann)
-  // deg.LAM_id.add_model(2); //!< Delacourt LAM
-  // deg.LAM_id.add_model(3); //!< Kindermann LAM
+  //!< there are 2 LAM models (Delacourt and Kindermann)
+  deg.LAM_id.add_model(2); //!< Delacourt LAM
+  deg.LAM_id.add_model(3); //!< Kindermann LAM
 
-  // deg.pl_id = 1; //!< Yang lithium plating
+  deg.pl_id = 1; //!< Yang lithium plating
 
-  // std::cout << "Used ageing model: " << deg.print() << '\n';
+  std::cout << "Used ageing model: " << deg.print() << '\n';
 
   //!< Then the user has to choose what is simulated.
   //!< In the code below, uncomment the line which calls the function you want to execute (uncommenting means removing the //!<in front of the line)
@@ -136,7 +136,7 @@ int main()
   using namespace slide;
 
   //!< Examples:
-  // slide::examples::drive_cycle_artemis();
+  slide::examples::drive_cycle_artemis();
   // slide::examples::GITT_test();
   //!< Benchmarks:
 
@@ -148,7 +148,7 @@ int main()
   // slide::benchmarks::run_LP_case_MediumPack();
   // slide::benchmarks::run_LP_case_LargePack();
 
-  // MATLAB ECM benchmarks:
+  // // MATLAB ECM benchmarks:
   // slide::benchmarks::run_Cell_Bucket_single_default_pulse();
   // slide::benchmarks::run_Cell_Bucket_single_default_CCCV();
 
